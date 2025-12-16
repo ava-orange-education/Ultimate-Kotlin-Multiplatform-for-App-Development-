@@ -1,65 +1,31 @@
-# Ultimate-Kotlin-Multiplatform-for-App-Development-
-Ultimate Kotlin Multiplatform for App Development, published by Orange, AVA®
+## Ultimate Kotlin Multiplatform for App Development
 
----
+This is the repository for [Ultimate Kotlin Multiplatform for App Development](https://orangeava.com/products/ultimate-kotlin-multiplatform-for-app-development), published by Orange AVA™
 
-# TaskLite Kotlin Multiplatform Project
+## About the Book
+Kotlin is a modern, expressive, and versatile language that has transformed the way developers build applications. Ultimate Kotlin Multiplatform for App Development takes you on a complete journey to mastering Kotlin Multiplatform, empowering you to create high-performance Android, iOS, and Web applications from a single shared codebase.
 
-TaskLite is a task management application developed using Kotlin Multiplatform. The project shares business logic and core data models across Android and iOS platforms, enabling code reuse and easier maintenance.
+You will begin by exploring the core foundations of Kotlin, syntax, structure, and key features, before advancing into topics such as object-oriented and functional programming, coroutines, and concurrency. From there, the book guides you through multiplatform architecture, project setup, Gradle configuration, and dependency management, giving you the skills to structure efficient, scalable cross-platform projects.
 
----
+Practical examples show you how to leverage essential libraries such as Ktor for networking, Koin for dependency injection, SQLDelight for database management, and Multiplatform Settings for shared configurations. Thus, by the end of this book, you will have the confidence and expertise to build, deploy, and optimize cross-platform applications — and become a truly modern Kotlin Multiplatform developer!
+ 
+## What you will learn
+● Build cross-platform apps for Android, iOS, and Web using a single shared Kotlin codebase.
 
-## Architecture Overview
+● Configure and manage multiplatform projects efficiently with Gradle and IDE tools.
 
-### Shared Module
+● Master Kotlin essentials and advanced concepts, including coroutines, serialization, and functional programming.
 
-- The Shared module contains the common logic and data models written in Kotlin.
-- Core data model: `Task` with properties such as `id`, `title`, and `isDone` (task completion status).
-- Business logic and state management handled via `TaskViewModel` which maintains a list of tasks and exposes them as reactive `StateFlow`.
-- Repository pattern (`TaskRepository`) abstracts data source and provides APIs to load, add, update, and delete tasks.
-- Uses Kotlin Coroutines and `StateFlow` for asynchronous and reactive state management.
-- Supports multiplatform via `expect/actual` declarations for platform-specific implementations when necessary.
-- Dependency Injection is configured using Koin with modules defined in `sharedModule`.
+● Integrate modern libraries such as Ktor, Koin, and SQLDelight for networking, DI, and data persistence.
 
-### Android Module
+● Create native-like UIs with Jetpack Compose, SwiftUI, and Kotlin/React.
 
-- Android-specific implementation and UI layer reside here.
-- Uses Android ViewModel, LiveData and Jetpack-Compose for UI updates (depending on the exact details).
-- Accesses shared business logic and repositories from the Shared module.
-- AndroidManifest and platform-specific resources are configured here.
-- Uses Kotlin Coroutines for background operations.
+● Apply clean architecture and best practices for scalable and maintainable app design.
 
-### iOS Module
+## More products
+1. [Ultimate AWS Certified Security Specialty (SCS-CO2) Exam Guide](https://orangeava.com/products/ultimate-aws-certified-security-specialty-scs-co2-exam-guide)
+2. [Ultimate Java Functional Projects](https://orangeava.com/products/ultimate-java-functional-projects)
+3. [Network Forensics with Wireshark](https://orangeava.com/products/network-forensics-with-wireshark)
 
-- iOS platform-specific implementation is written in Swift or Kotlin/Native bindings to UI frameworks.
-- Utilizes the shared codebase for business logic and data models.
-- Bridges between Kotlin Multiplatform shared code and native iOS UI framework (e.g. SwiftUI or UIKit).
-- Platform-specific features are implemented via `actual` implementation in the shared module.
-
----
-
-## Technologies and Patterns
-
-- Kotlin Multiplatform for sharing code between platforms.
-- MVVM architecture pattern to separate UI and business logic.
-- Reactive programming with Kotlin Coroutines and StateFlow.
-- Repository pattern for data abstraction.
-- Dependency Injection with Koin.
-- Platform-specific implementations with `expect`/`actual`.
-
----
-
-## Further Improvements (to try out/explore Kotlin Multiplatform capabilities)
-
-- Add persistent local storage using SQLDelight or Realm to save tasks across app launches.
-- Integrate synchronization with a backend service for cloud backup and multi-device support.
-- Implement advanced task features like due dates, categories, and priorities.
-- Add unit and UI tests to improve reliability and maintainability.
-- Enhance the iOS UI integration with SwiftUI.
-- Support additional platforms like desktop or web.
-- Add multi-language support for internationalization.
-- Implement task notifications and reminders.
-
----
-
-This project demonstrates how Kotlin Multiplatform can be used to build a multi-platform mobile app with shared business logic and platform-specific UI implementations.
+## Visit Website 
+[www.orangeava.com](https://orangeava.com
